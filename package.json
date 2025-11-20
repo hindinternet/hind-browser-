@@ -1,0 +1,9 @@
+{
+  "name": "hind-browser",
+  "version": "1.0.0",
+  "description": "Hind Internet Browser Project",
+  "main": "index.js",
+  "scripts": {
+    "verify": "node scripts/verifyProject.js"
+  }
+}
