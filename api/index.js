@@ -64,3 +64,5 @@ router.get("/", (req, res) => {
 });
 
 module.exports = router;
+// Temporary empty API module
+module.exports = {};
