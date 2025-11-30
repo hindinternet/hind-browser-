@@ -1,11 +1,25 @@
-// Core Engine placeholder
 
-// Example function
-function helloEngine() {
-    console.log("Core Engine is working!");
+
+function validateURL(url) {
+    // Empty URL check
+    if (!url || url.trim() === "") {
+        return false;
+    }
+
+    // Space remove
+    url = url.trim();
+
+    
+    if (!url.startsWith("http://") && !url.startsWith("https://")) {
+        url = "https://" + url;
+    }
+
+    return url;
 }
 
-// Export functions
-module.exports = {
-    helloEngine
-};
+
+if (typeof window !== "undefined") {
+    window.HIND_ENGINE = {
+        validateURL
+    };
+}
