@@ -1,27 +1,21 @@
+// HIND Browser Client Layer
+// Yeh file frontend aur core-engine ko connect karegi
 
+function processURL() {
+    let input = document.getElementById("urlInput").value;
 
-const API_BASE_URL = "http://localhost:3000"; // backend address
+    // Core Engine validation
+    let finalURL = HIND_ENGINE.validateURL(input);
 
-// ===========================
-//       GLOBAL GET REQUEST
-// ===========================
+    if (!finalURL) {
+        alert("Invalid URL!");
+        return;
+    }
 
-export async function apiGet(path) {
-  try {
-    const res = await fetch(`${API_BASE_URL}${path}`);
-    return await res.json();
-  } catch (err) {
-    console.error("API GET Error:", err);
-    return null;
-  }
+    // Page load
+    document.getElementById("browserFrame").src = finalURL;
 }
 
 
-import { apiGet } from "./client.js";
 
-async function testConnection() {
-  const result = await apiGet("/health");
-  console.log("Backend Response:", result);
-}
 
-testConnection();
