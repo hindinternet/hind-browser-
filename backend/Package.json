@@ -1,12 +1,11 @@
 {
-  "name": "hind-browser-backend",
+  "name": "hind-backend",
   "version": "1.0.0",
-  "description": "HIND Browser Backend Server",
+  "description": "HIND Browser backend (basic)",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
-  "dependencies": {
-    "express": "^4.18.2"
-  }
+  "author": "Sharwan Arya",
+  "license": "MIT"
 }
